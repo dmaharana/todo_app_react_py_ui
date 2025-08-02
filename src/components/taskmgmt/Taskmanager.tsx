@@ -272,9 +272,9 @@ export const Taskmanager = () => {
                               setEditingTask(null);
                             }
                           }}
-                          onKeyDown={(e) => {
+                          onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
                             if (e.key === "Enter") {
-                              e.target.blur();
+                              (e.target as HTMLInputElement).blur();
                             } else if (e.key === "Escape") {
                               setEditingTask(null);
                             }
